@@ -8,7 +8,6 @@ class Query(graphene.ObjectType):
     news = graphene.List(News)
 
     def resolve_news(self, info):
-        # Substitua esta lista com suas notícias reais
         fake_news = [
             {"title": "Santos vence a partida", "content": "O time Santos venceu por 2-0."},
             {"title": "Nova contratação para o Santos", "content": "Santos contrata novo jogador."},
