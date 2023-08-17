@@ -12,7 +12,6 @@ class Query(ObjectType):
     news = List(News)
 
     def resolve_news(self, info):
-        # Substitua esta lista com suas notícias reais
         fake_news = [
             {"title": "Santos vence a partida", "content": "O time Santos venceu por 2-0."},
             {"title": "Nova contratação para o Santos", "content": "Santos contrata novo jogador."},
@@ -25,4 +24,3 @@ app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql', schema=sch
 
 if __name__ == '__main__':
     app.run(debug=True)
-
